@@ -13,7 +13,7 @@ jobs:
       - name: Create Executable
         uses: sayyid5416/pyinstaller@v1
         with:
-          python_ver: '3.9.9'
+          python_ver: '3.9'
           spec: 'test.py'
-          upload_exe_with_name: '豆瓣spider'
-          options: --onefile, --name "豆瓣spider", --windowed,
+          upload_exe_with_name: 'spider'
+          options: --onefile, --name "spider", --windowed,
