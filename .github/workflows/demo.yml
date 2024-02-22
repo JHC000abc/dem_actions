@@ -2,17 +2,18 @@ name: 豆瓣爬虫ubuntu版
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: 'Checkout Codes'
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
 
       - name: 'Setup Python'
-        uses: actions/setup-python@master
+        uses: actions/setup-python@v2
         with:
           python-version: 3.9
 
@@ -21,6 +22,6 @@ jobs:
           python -m pip install --upgrade pip && \
           pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple
 
-      -name: 'Build'
+      - name: 'Build'
         run: |
           pyinstaller -F test.py
