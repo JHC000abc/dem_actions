@@ -29,3 +29,9 @@ jobs:
     - name: Build exe
       run: |
         pyinstaller --onefile test.py
+
+    - name: Publish Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: my-exe-files
+          path: dist  # 将 dist 目录下的文件发布为构建产物
