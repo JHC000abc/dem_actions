@@ -25,4 +25,4 @@ jobs:
 
     - name: Build exe
       run: |
-        pyinstaller --onefile your_script.py
+        pyinstaller --onefile test.py
