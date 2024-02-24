@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2e2de0e3-34d6-4aaf-8137-155436313965" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/build_ubuntu.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build_ubuntu.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/build_windows.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build_windows.yml" afterDir="false" />
-    </list>
+    <list default="true" id="2e2de0e3-34d6-4aaf-8137-155436313965" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,7 +67,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1708772672376</updated>
-      <workItem from="1708772678536" duration="3469000" />
+      <workItem from="1708772678536" duration="4014000" />
     </task>
     <servers />
   </component>
