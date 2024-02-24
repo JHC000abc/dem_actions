@@ -25,7 +25,7 @@ jobs:
 
     - name: Build exe
       run: |
-        pyinstaller --onefile test.py
+        pyinstaller --onefile start.py
 
     - name: Publish Artifact
       uses: actions/upload-artifact@v2
