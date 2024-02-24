@@ -10,25 +10,32 @@
 import requests
 
 
-headers = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
-}
 
-url = "https://movie.douban.com/j/chart/top_list"
-params = {
-    "type": "17",
-    "interval_id": "100:90",
-    "action": "",
-    "start": "0",
-    "limit": "100"
-}
-response = requests.get(url, headers=headers, params=params)
 
-# print(json.dumps(response.json(),indent=4,ensure_ascii=False))
+def get_response():
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+    }
 
-data = response.json()
-for args in data:
-    title = args["title"]
-    score = args["score"]
-    rank = args["rank"]
-    print(title, score, rank)
+    url = "https://movie.douban.com/j/chart/top_list"
+    params = {
+        "type": "17",
+        "interval_id": "100:90",
+        "action": "",
+        "start": "0",
+        "limit": "100"
+    }
+    response = requests.get(url, headers=headers, params=params)
+    return response
+
+
+
+
+if __name__ == '__main__':
+    data = get_response().json()
+    for args in data:
+        title = args["title"]
+        score = args["score"]
+        rank = args["rank"]
+        print(title, score, rank)
+    input("回车退出")
