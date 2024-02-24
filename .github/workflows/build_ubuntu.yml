@@ -30,4 +30,5 @@ jobs:
     - name: Publish Artifact
       uses: actions/upload-artifact@v2
       with:
-        name: test_V1.0
+        name: test_ubuntu_V1.0
+        path: dist
