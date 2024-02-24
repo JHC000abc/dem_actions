@@ -12,14 +12,11 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-      with:
-        node-version: '20'  # 指定使用 Node.js 20 版本
 
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
         python-version: '3.9'
-        node-version: '20'  # 指定使用 Node.js 20 版本
 
     - name: Install dependencies
       run: |
@@ -31,7 +28,7 @@ jobs:
         pyinstaller --onefile test.py
 
     - name: Publish Artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: my-exe-files
-          path: dist  # 将 dist 目录下的文件发布为构建产物
+      uses: actions/upload-artifact@v2
+      with:
+        name: my-exe-files
+        path: dist  # 将 dist 目录下的文件发布为构建产物
