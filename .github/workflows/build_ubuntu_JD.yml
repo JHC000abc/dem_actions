@@ -1,4 +1,4 @@
-name: Build Ubuntu
+name: Build Ubuntu JD
 
 on:
   push:
@@ -25,10 +25,10 @@ jobs:
 
     - name: Build exe
       run: |
-        pyinstaller --onefile start.py
+        pyinstaller --onefile register.py
 
     - name: Publish Artifact
       uses: actions/upload-artifact@v2
       with:
-        name: test_ubuntu_V1.0
+        name: JD_register
         path: dist
